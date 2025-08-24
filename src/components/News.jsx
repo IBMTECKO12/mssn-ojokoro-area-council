@@ -40,7 +40,7 @@ const News = () => {
     <div className="min-h-screen bg-white text-green-900">
       <Header />
       <section className="relative">
-        <img src="/public/images/banner-news.jpeg" alt="News Banner" className="w-full h-64 object-cover" />
+        <img src="/images/banner-news.jpeg" alt="News Banner" className="w-full h-64 object-cover" />
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="section-title text-5xl font-bold text-white">News</h1>
         </div>

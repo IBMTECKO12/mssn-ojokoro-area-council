@@ -14,9 +14,9 @@ const Footer = () => {
       </section>
       <p className="mb-2">COPYRIGHT ©2024, MSSN. ALL RIGHTS RESERVED.</p>
       <div className="flex justify-center space-x-4">
-        <a href="#"><img src="/assets/images/facebook-icon.png" alt="Facebook" className="hover:opacity-75" /></a>
-        <a href="#"><img src="/assets/images/youtube-icon.png" alt="YouTube" className="hover:opacity-75" /></a>
-        <a href="#"><img src="/assets/images/instagram-icon.png" alt="Instagram" className="hover:opacity-75" /></a>
+        <a href="https://web.facebook.com/mssnojokoro/?_rdc=1&_rdr"><img src="/images/facebook-icon.png" alt="Facebook" className="hover:opacity-75 w-16 h-16" /></a>
+        <a href="https://www.youtube.com/@MSSNOJOKOROAREACOUNCIL-rw6ed"><img src="/images/youtube-icon.png" alt="YouTube" className="hover:opacity-75 w-16 h-16" /></a>
+        <a href="https://www.instagram.com/mssnojokoroareacouncil?igsh=YzljYTk1ODg3Zg=="><img src="/images/instagram-icon.png" alt="Instagram" className="hover:opacity-75 w-16 h-16" /></a>
       </div>
     </footer>
   );

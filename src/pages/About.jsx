@@ -145,7 +145,7 @@ const About = () => {
 
       {/* Meet the Amir */}
       <section className="leadership-item py-10 px-4 flex flex-col md:flex-row items-center">
-        <img src="/public/images/Amir.jpeg" alt="Amir" className="rounded-full mr-6 w-32 h-32" />
+        <img src="/images/Amir.jpeg" alt="Amir" className="rounded-full mr-6 w-32 h-32" />
         <div>
           <h2 className="text-3xl font-bold mb-2">Meet the Amir</h2>
           <p>Name: Ibrahim AbdulGhaniy Fadipe</p>
@@ -163,7 +163,7 @@ const About = () => {
 
       {/* Meet the Amirah */}
       <section className="leadership-item py-10 px-4 flex flex-col md:flex-row items-center">
-        <img src="/public/images/Amirah.png" alt="Amirah" className="rounded-full mr-6 w-32 h-32" />
+        <img src="/images/Amirah.png" alt="Amirah" className="rounded-full mr-6 w-32 h-32" />
         <div>
           <h2 className="text-3xl font-bold mb-2">Meet the Amirah</h2>
           <p>Haleemah Tijani Balogun is an alumna of OOU, UNILAG, PAU/EDC, FATE Foundation, and CPD College, UK and still counting, bi idhniLlah.</p>

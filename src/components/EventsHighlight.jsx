@@ -52,7 +52,7 @@ const EventsHighlight = () => {
     <div className="min-h-screen bg-white text-green-900">
       <Header />
       <section className="relative">
-        <img src="/public/images/banner-events.jpeg" alt="Events Highlight Banner" className="w-full h-64 object-cover" />
+        <img src="/images/banner-events.jpeg" alt="Events Highlight Banner" className="w-full h-64 object-cover" />
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="section-title text-5xl font-bold text-white">Events Highlight</h1>
         </div>
@@ -62,7 +62,7 @@ const EventsHighlight = () => {
         <h2 className="section-title text-3xl font-bold text-center mb-6">Upcoming Events</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <div className="event-item bg-green-100 p-4 rounded-lg shadow-md">
-            <img src="/assets/images/event1.jpg/300x200" alt="Islamic Lecture" className="w-full h-48 object-cover rounded mb-4" />
+            <img src="/images/event1.jpg/300x200" alt="Islamic Lecture" className="w-full h-48 object-cover rounded mb-4" />
             <h3 className="text-xl font-semibold">Islamic Lecture</h3>
             <p>Date: August 30, 2025</p>
             <p>Time: 10:00 AM - 12:00 PM WAT</p>
@@ -70,7 +70,7 @@ const EventsHighlight = () => {
             <p>Details: Join us for an enlightening lecture on contemporary Islamic issues.</p>
           </div>
           <div className="event-item bg-green-100 p-4 rounded-lg shadow-md">
-            <img src="/assets/images/event2.jpg/300x200" alt="Community Outreach" className="w-full h-48 object-cover rounded mb-4" />
+            <img src="/images/event2.jpg/300x200" alt="Community Outreach" className="w-full h-48 object-cover rounded mb-4" />
             <h3 className="text-xl font-semibold">Community Outreach</h3>
             <p>Date: September 5, 2025</p>
             <p>Time: 9:00 AM - 2:00 PM WAT</p>
@@ -85,14 +85,14 @@ const EventsHighlight = () => {
         <h2 className="section-title text-3xl font-bold text-center mb-6">Past Events</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <div className="event-item bg-green-800 p-4 rounded-lg shadow-md">
-            <img src="/assets/images/event3.jpg/300x200" alt="Annual Qur'an Recitation" className="w-full h-48 object-cover rounded mb-4" />
+            <img src="/images/event3.jpg/300x200" alt="Annual Qur'an Recitation" className="w-full h-48 object-cover rounded mb-4" />
             <h3 className="text-xl font-semibold">Annual Qur'an Recitation</h3>
             <p>Date: July 15, 2025</p>
             <p>Location: Lagos Central Mosque</p>
             <p>Details: A successful event with over 200 participants.</p>
           </div>
           <div className="event-item bg-green-800 p-4 rounded-lg shadow-md">
-            <img src="/assets/images/event4.jpg/300x200" alt="Youth Empowerment Seminar" className="w-full h-48 object-cover rounded mb-4" />
+            <img src="/images/event4.jpg/300x200" alt="Youth Empowerment Seminar" className="w-full h-48 object-cover rounded mb-4" />
             <h3 className="text-xl font-semibold">Youth Empowerment Seminar</h3>
             <p>Date: June 20, 2025</p>
             <p>Location: OAU Campus</p>
@@ -106,14 +106,14 @@ const EventsHighlight = () => {
         <h2 className="section-title text-3xl font-bold text-center mb-6">Ongoing Programs</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <div className="event-item bg-green-100 p-4 rounded-lg shadow-md">
-            <img src="/assets/images/program1.jpg/300x200" alt="Arabic Language Classes" className="w-full h-48 object-cover rounded mb-4" />
+            <img src="/images/program1.jpg/300x200" alt="Arabic Language Classes" className="w-full h-48 object-cover rounded mb-4" />
             <h3 className="text-xl font-semibold">Arabic Language Classes</h3>
             <p>Schedule: Every Saturday, 2:00 PM - 4:00 PM WAT</p>
             <p>Location: MSSN Learning Center</p>
             <p>Details: Free classes for all age groups to learn Arabic.</p>
           </div>
           <div className="event-item bg-green-100 p-4 rounded-lg shadow-md">
-            <img src="/assets/images/program2.jpg/300x200" alt="Welfare Support Initiative" className="w-full h-48 object-cover rounded mb-4" />
+            <img src="/images/program2.jpg/300x200" alt="Welfare Support Initiative" className="w-full h-48 object-cover rounded mb-4" />
             <h3 className="text-xl font-semibold">Welfare Support Initiative</h3>
             <p>Schedule: Ongoing</p>
             <p>Location: Various communities</p>
@@ -126,7 +126,7 @@ const EventsHighlight = () => {
       <section className="py-10 px-4 bg-green-800 text-white">
         <h2 className="section-title text-3xl font-bold text-center mb-6">Featured Event</h2>
         <div className="event-item bg-green-700 p-6 rounded-lg shadow-md max-w-2xl mx-auto text-center">
-          <img src="/assets/images/featured-event.jpg/600x400" alt="Islamic Lecture" className="w-full h-64 object-cover rounded mb-4" />
+          <img src="/images/featured-event.jpg/600x400" alt="Islamic Lecture" className="w-full h-64 object-cover rounded mb-4" />
           <h3 className="text-2xl font-semibold">Islamic Lecture: Understanding the Sunnah</h3>
           <p>Date: August 30, 2025</p>
           <p>Time: 10:00 AM - 12:00 PM WAT</p>
