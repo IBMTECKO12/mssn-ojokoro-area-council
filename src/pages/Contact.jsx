@@ -49,15 +49,14 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <div className="contact-item bg-green-100 p-4 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold">Secretariat</h3>
-            <p>Address: MSSN Secretariat, Lagos, Nigeria</p>
-            <p>Phone: +234 806 666 9591</p>
-            <p>Email: info@mssnojekoro.org</p>
+            <p><b>Address:</b> MSSN OJOKORO Secretariat, Nurein Yusuf Compound, Kola, Alagbado, Lagos, Nigeria</p>
+            <p><b>Phone:</b> +234 807 900 7292, +234 806 868 8096, +234 803 070 6008</p>
+            <p><b>Email:</b> mssnojokoroareacouncil@gmail.com</p>
           </div>
           <div className="contact-item bg-green-100 p-4 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold">Support Hours</h3>
             <p>Monday - Friday: 9:00 AM - 5:00 PM WAT</p>
-            <p>Saturday: 10:00 AM - 2:00 PM WAT</p>
-            <p>Sunday: Closed</p>
+            <p>Saturday - Sunday: 10:00 AM - 2:00 PM WAT</p>
           </div>
         </div>
       </section>
@@ -89,7 +88,7 @@ const Contact = () => {
         <h2 className="section-title text-3xl font-bold text-center mb-6">Find Us</h2>
         <div className="contact-item max-w-4xl mx-auto bg-green-100 p-4 rounded-lg shadow-md">
           <div className="h-64 bg-gray-300 rounded" style={{ backgroundImage: 'url(https://www.google.com/maps/embed?pb=!4v1756071753777!6m8!1m7!1sTIO5_7v_dRx3O5kdeG1Tkw!2m2!1d6.676143248841215!2d3.273781608463964!3f34.27725357582904!4f-6.106383865701488!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade)' }}></div>
-          <p className="mt-2 text-center">Location: MSSN OJOKORO Secretariat, Alagbado, Lagos, Nigeria</p>
+          <p className="mt-2 text-center">Location: Jubril Alade Yussuff Compound, Jubril Alade Yussuff Drive, Off Nurain Road, Kola Bus-stop, Agbado, Lagos.</p>
         </div>
       </section>
       <Footer />

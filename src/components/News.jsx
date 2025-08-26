@@ -51,16 +51,6 @@ const News = () => {
       <section className="py-4 bg-green-700 text-center">
         <button className="animate-item bg-yellow-400 text-green-900 px-6 py-2 rounded hover:bg-yellow-500">Stay Updated</button>
       </section>
-      <section className="py-10 px-4 bg-green-800 text-white">
-        <h2 className="section-title text-3xl font-bold text-center mb-6 text-yellow-300">Our Official Contacts</h2>
-        <div className="animate-item max-w-2xl mx-auto text-center">
-          <p className="mb-2">Jubril Alade Yussuff Compound, Jubril Alade Yussuff Drive, Off Nurain Road, Kola Bus-stop, Agbado, Lagos.</p>
-          <p className="mb-2">Amir - +234 807 900 7292</p>
-          <p className="mb-2">Naibul Amir - +234 802 896 5287</p>
-          <p className="mb-2">Secretariat - +234 806 666 9591</p>
-          <p>24 hours a Day, 7 days a week</p>
-        </div>
-      </section>
       <Footer />
     </div>
   );

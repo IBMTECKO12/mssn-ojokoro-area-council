@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import UploadForm from './UploadForm';
+import EventSlideshow from './EventSlideshow';
 
 const EventsHighlight = () => {
   useEffect(() => {
@@ -38,7 +39,8 @@ const EventsHighlight = () => {
         item.style.transform = 'translateX(0)';
       }, index * 150);
     });
-  }, []);
+  }, 
+  []);
 
   const handleSubmit = (data) => {
   const submissions = JSON.parse(localStorage.getItem('submissions') || '[]');
@@ -62,43 +64,43 @@ const EventsHighlight = () => {
         <h2 className="section-title text-3xl font-bold text-center mb-6">Upcoming Events</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <div className="event-item bg-green-100 p-4 rounded-lg shadow-md">
-            <img src="/images/event1.jpg/300x200" alt="Islamic Lecture" className="w-full h-48 object-cover rounded mb-4" />
-            <h3 className="text-xl font-semibold">Islamic Lecture</h3>
-            <p>Date: August 30, 2025</p>
-            <p>Time: 10:00 AM - 12:00 PM WAT</p>
-            <p>Location: MSSN Secretariat, Lagos</p>
-            <p>Details: Join us for an enlightening lecture on contemporary Islamic issues.</p>
+            <img src="/images/event1.jpg" alt="SMP Graduation and Inauguration" className="w-full h-48 object-cover rounded mb-4" />
+            <h3 className="text-xl font-semibold">SMP Graduation and Inauguration</h3>
+            <p><b>Date:</b> August 30, 2025</p>
+            <p><b>Time:</b> 10:00 AM - 2:00 PM WAT</p>
+            <p><b>Location:</b> Xtraction Training Hub, Alakuko.</p>
+            <p><b>Details:</b> A remarkable moment of transition: Celebrating the successful Graduation of Cohort 1, honoring their journey and achievements, while joyfully welcoming the Official Inauguration of Cohort 2 as they begin their own path of growth and excellence.</p>
           </div>
           <div className="event-item bg-green-100 p-4 rounded-lg shadow-md">
-            <img src="/images/event2.jpg/300x200" alt="Community Outreach" className="w-full h-48 object-cover rounded mb-4" />
-            <h3 className="text-xl font-semibold">Community Outreach</h3>
-            <p>Date: September 5, 2025</p>
-            <p>Time: 9:00 AM - 2:00 PM WAT</p>
-            <p>Location: Ogun State Community Center</p>
-            <p>Details: Volunteer with us to support local community welfare programs.</p>
+            <img src="/images/event2.jpeg" alt="YLF Graduation of class of 2025 and Inauguration" className="w-full h-48 object-cover rounded mb-4" />
+            <h3 className="text-xl font-semibold">YLF Graduation of class of 2025 and Inauguration</h3>
+            <p><b>Date:</b> August 31, 2025</p>
+            <p><b>Time:</b> 10:00 AM - 4:00 PM WAT</p>
+            <p><b>Location:</b> Wamon Taofeeq Central Mosque, Abule Egba.</p>
+            <p><b>Details:</b> A proud celebration: Marking the Graduation of the Class of 2025 YLF students, recognizing their hard work and dedication, while also celebrating the Promotion of students into higher classes and joyfully welcoming the Inauguration of new members into the YLF classes.</p>
+          </div>
+          <div className="event-item bg-green-100 p-4 rounded-lg shadow-md">
+            <img src="/images/event3.jpg" alt="Teachers Get-Together" className="w-full h-48 object-cover rounded mb-4" />
+            <h3 className="text-xl font-semibold">Teachers Get-Together</h3>
+            <p><b>Date:</b> October 5, 2025</p>
+            <p><b>Time:</b> 10:00 AM - 2:00 PM WAT</p>
+            <p><b>Location:</b> Ojokoro Housing Estate Central Mosque</p>
+            <p><b>Details:</b> An inspiring occasion of connection and appreciation: The Teachers’ Get-Together brings our educators together to relax, share experiences, strengthen bonds, and celebrate the invaluable role they play in shaping lives and building the future.</p>
+          </div>
+          <div className="event-item bg-green-100 p-4 rounded-lg shadow-md">
+            <img src="/images/event4.jpeg" alt="Islamic Vacation Course (IVC)" className="w-full h-48 object-cover rounded mb-4" />
+            <h3 className="text-xl font-semibold">Islamic Vacation Course (IVC)</h3>
+            <p><b>Date:</b> December 24, 2025 to January 1, 2026</p>
+            <p><b>Location:</b> Human Capital Development Center (HCDC), Noforija, Epe, Lagos.</p>
+            <p><b>Details:</b> An avenue whereby members of the society and other members usually gather to boost their spirituality and also a means to reawaken the soul, assist individuals to guard their souls against the several menaces and ills of the community during the Christian festive seasons, and also relate with different individuals across Lagos State.
+</p>
           </div>
         </div>
       </section>
 
-      {/* Past Events Section */}
       <section className="py-10 px-4 bg-green-700 text-white">
         <h2 className="section-title text-3xl font-bold text-center mb-6">Past Events</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          <div className="event-item bg-green-800 p-4 rounded-lg shadow-md">
-            <img src="/images/event3.jpg/300x200" alt="Annual Qur'an Recitation" className="w-full h-48 object-cover rounded mb-4" />
-            <h3 className="text-xl font-semibold">Annual Qur'an Recitation</h3>
-            <p>Date: July 15, 2025</p>
-            <p>Location: Lagos Central Mosque</p>
-            <p>Details: A successful event with over 200 participants.</p>
-          </div>
-          <div className="event-item bg-green-800 p-4 rounded-lg shadow-md">
-            <img src="/images/event4.jpg/300x200" alt="Youth Empowerment Seminar" className="w-full h-48 object-cover rounded mb-4" />
-            <h3 className="text-xl font-semibold">Youth Empowerment Seminar</h3>
-            <p>Date: June 20, 2025</p>
-            <p>Location: OAU Campus</p>
-            <p>Details: Focused on skill development for Muslim youth.</p>
-          </div>
-        </div>
+        <EventSlideshow />
       </section>
 
       {/* Ongoing Programs Section */}
@@ -106,18 +108,33 @@ const EventsHighlight = () => {
         <h2 className="section-title text-3xl font-bold text-center mb-6">Ongoing Programs</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <div className="event-item bg-green-100 p-4 rounded-lg shadow-md">
-            <img src="/images/program1.jpg/300x200" alt="Arabic Language Classes" className="w-full h-48 object-cover rounded mb-4" />
-            <h3 className="text-xl font-semibold">Arabic Language Classes</h3>
-            <p>Schedule: Every Saturday, 2:00 PM - 4:00 PM WAT</p>
-            <p>Location: MSSN Learning Center</p>
-            <p>Details: Free classes for all age groups to learn Arabic.</p>
+            <img src="/images/program1.jpeg" alt="Weekly Usrah" className="w-full h-48 object-cover rounded mb-4" />
+            <h3 className="text-xl font-semibold">Weekly Usrah</h3>
+            <p><b>Schedule:</b> Every Friday, 2:45 PM - 4:00 PM WAT</p>
+            <p><b>Location:</b> Ojokoro Housing Estate Central Mosque and Morkazul Uloom Mosque</p>
+            <p><b>Details:</b> The Usrah serves as a weekly rallying point for the working class, secondary schools, higher institutions, as well as artisans in the council. It features Adhkar's, spiritual and enlightening lectures, including issues around the world.</p>
           </div>
           <div className="event-item bg-green-100 p-4 rounded-lg shadow-md">
-            <img src="/images/program2.jpg/300x200" alt="Welfare Support Initiative" className="w-full h-48 object-cover rounded mb-4" />
-            <h3 className="text-xl font-semibold">Welfare Support Initiative</h3>
-            <p>Schedule: Ongoing</p>
-            <p>Location: Various communities</p>
-            <p>Details: Providing aid and support to needy families.</p>
+            <img src="/images/program2.jpg" alt="Youth Leader Forum (YLF)" className="w-full h-48 object-cover rounded mb-4" />
+            <h3 className="text-xl font-semibold">Youth Leader Forum (YLF)</h3>
+            <p><b>Schedule:</b> Every 1st and 3rd Sundays of the month.</p>
+            <p><b>Location:</b> Yusuf Alade Mosque, Nurein Compound, Kola.</p>
+            <p><b>Details:</b> A noble mission: Training Muslim youths to become visionary and responsible leaders, nurturing their character, faith, and skills to inspire positive change and lead with excellence in their communities and beyond.</p>
+          </div>
+          <div className="event-item bg-green-100 p-4 rounded-lg shadow-md">
+            <img src="/images/program3.jpeg" alt="Extra Mural Class (EMC)" className="w-full h-48 object-cover rounded mb-4" />
+            <h3 className="text-xl font-semibold">Extra Mural Class (EMC)</h3>
+            <p><b>Schedule:</b> Every Mondays to Thursdays, 4:00 PM - 6:00 PM WAT</p>
+            <p><b>Location:</b> Fahmid Kiddies Academy
+              18, Shittu street, Off Clem road, Alagbado, Lagos.</p>
+            <p><b>Details:</b>  It's an academic center, where we teach secondary school students their compulsory subjects. It would facilitate students for two major examinations, WAEC and UTME, which will be well coordinated by the Director of Studies (DOS).</p>
+          </div>
+          <div className="event-item bg-green-100 p-4 rounded-lg shadow-md">
+            <img src="/images/program4.jpeg" alt="Extra Mural Class (EMC)" className="w-full h-48 object-cover rounded mb-4" />
+            <h3 className="text-xl font-semibold">School-Leavers Mentorship Program (SMP)</h3>
+            <p><b>Schedule:</b> Every Saturday, 10:00 AM - 2:00 PM WAT</p>
+            <p><b>Location:</b> Xtraction Training Hub, Alakuko.</p>
+            <p><b>Details:</b> Empowering the next generation: Training school leavers in both tech skills and essential soft skills, equipping them with the knowledge, confidence, and adaptability they need to thrive and succeed in the future.</p>
           </div>
         </div>
       </section>
@@ -126,12 +143,12 @@ const EventsHighlight = () => {
       <section className="py-10 px-4 bg-green-800 text-white">
         <h2 className="section-title text-3xl font-bold text-center mb-6">Featured Event</h2>
         <div className="event-item bg-green-700 p-6 rounded-lg shadow-md max-w-2xl mx-auto text-center">
-          <img src="/images/featured-event.jpg/600x400" alt="Islamic Lecture" className="w-full h-64 object-cover rounded mb-4" />
-          <h3 className="text-2xl font-semibold">Islamic Lecture: Understanding the Sunnah</h3>
-          <p>Date: August 30, 2025</p>
-          <p>Time: 10:00 AM - 12:00 PM WAT</p>
-          <p>Location: MSSN Secretariat, Lagos</p>
-          <p className="mt-2">Join our esteemed speaker, Sheikh Musa Abdallah, for an insightful session on the importance of the Sunnah in daily life. Registration is free and open now!</p>
+          <img src="/images/event2.jpeg" alt="Islamic Lecture" className="w-full object-cover rounded mb-4" />
+          <h3 className="text-2xl font-semibold">YLF Graduation of class of 2025 and Inauguration</h3>
+          <p><b>Date:</b> August 31, 2025</p>
+          <p><b>Time:</b> 10:00 AM - 4:00 PM WAT</p>
+          <p><b>Location:</b> Wamon Taofeeq Central Mosque, Abule Egba.</p>
+          <p className="mt-2">Join us in Marking the Graduation of the Class of 2025 YLF students, recognizing their hard work and dedication, while also celebrating the Promotion of students into higher classes and joyfully welcoming the Inauguration of new members into the YLF classes.</p>
           <a href="#" className="mt-4 inline-block bg-yellow-300 text-green-900 font-bold py-2 px-4 rounded hover:bg-yellow-400">Register Now</a>
         </div>
       </section>

@@ -75,7 +75,7 @@ const Home = () => {
       <section className="text-center py-10">
         <h1 className="welcome-text text-4xl font-bold mb-4">Welcome to MSSN Ojokoro Area Council</h1>
         <p className="text-lg mx-auto max-w-2xl">
-          The Muslim Students' Society of Nigeria (MSSN) is the meeting point for all Muslim students in secondary schools, technical schools, and higher institutions. The society is the largest spread of students' society (religious or otherwise) in Nigeria. The establishment of the MSSN is geared towards making every Muslim youth privileged to attend any school in the country—secondary or tertiary—to gain consciousness about Islam.
+          The Muslim Students' Society of Nigeria (MSSN) is the meeting point for all Muslim students in secondary schools, technical schools, and higher institutions. The society is the largest spread of students' society (religious or otherwise) in Nigeria. The establishment of the MSSN is geared towards making every Muslim youth privileged to attend any school in the country, secondary or tertiary to gain consciousness about Islam.
         </p>
       </section>
 
@@ -84,30 +84,25 @@ const Home = () => {
         <h2 className="text-3xl font-bold text-center mb-6">Upcoming Events</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="event-item bg-green-700 text-white p-4 rounded-lg">
-            <img src="https://via.placeholder.com/300x200" alt="Islamic Vacation Course" className="w-full h-48 object-cover mb-2" />
-            <h3 className="text-xl font-semibold">Islamic Vacation Course (IVC): 24th December, 2024</h3>
+            <img src="/images/event4.jpeg" alt="Islamic Vacation Course" className="w-full h-48 object-cover mb-2" />
+            <h3 className="text-xl font-semibold">Islamic Vacation Course (IVC): December, 2025</h3>
             <p className="text-sm">An avenue whereby members of the society and other members usually gather to boost their spirituality and also a means to reawaken the community...</p>
             <button className="mt-2 bg-yellow-400 text-green-900 px-4 py-2 rounded hover:bg-yellow-500">Register Now!</button>
           </div>
           <div className="event-item bg-green-700 text-white p-4 rounded-lg">
-            <img src="https://via.placeholder.com/300x200" alt="Sisters' Seminar" className="w-full h-48 object-cover mb-2" />
-            <h3 className="text-xl font-semibold">Sisters' Seminar: 8th February, 2025</h3>
-            <p className="text-sm">This program is held during MSSN week and aims to educate and enlighten Muslim sisters on their duties towards their Lord and society at large.</p>
+            <img src="/images/event1.jpg" alt="SMP Graduation and Inauguration" className="w-full h-48 object-cover mb-2" />
+            <h3 className="text-xl font-semibold">SMP Graduation and Inauguration: 30th August, 2025</h3>
+            <p className="text-sm">A remarkable moment of transition: Celebrating the successful Graduation of Cohort 1, honoring their journey and achievements, while joyfully welcoming the Official Inauguration of Cohort 2 as they begin their own path of growth and excellence.</p>
           </div>
           <div className="event-item bg-green-700 text-white p-4 rounded-lg">
-            <img src="https://via.placeholder.com/300x200" alt="Ummahhat Day" className="w-full h-48 object-cover mb-2" />
-            <h3 className="text-xl font-semibold">Ummahhat Day: 26th February 2025</h3>
-            <p className="text-sm">This annual program brings sisters from the nooks and crannies of Lagos and its environment together. The events are divided into health and religion segments.</p>
+            <img src="/images/event2.jpeg" alt="YLF Graduation and Inauguration" className="w-full h-48 object-cover mb-2" />
+            <h3 className="text-xl font-semibold">YLF Graduation of class of 2025 and Inauguration: 31th August, 2025</h3>
+            <p className="text-sm">A proud celebration: Marking the Graduation of the Class of 2025 YLF students, recognizing their hard work and dedication, while also celebrating the Promotion of students into higher classes and joyfully welcoming the Inauguration of new members into the YLF classes.</p>
           </div>
           <div className="event-item bg-green-700 text-white p-4 rounded-lg">
-            <img src="https://via.placeholder.com/300x200" alt="MSSN Week" className="w-full h-48 object-cover mb-2" />
-            <h3 className="text-xl font-semibold">MSSN Week: 7th February, 2025</h3>
-            <p className="text-sm">It's a 10-day filled with different programs like youth conference, special usrah, formal opening, sisters' seminar, matchpast, Ameer's Cup...</p>
-          </div>
-          <div className="event-item bg-green-700 text-white p-4 rounded-lg">
-            <img src="https://via.placeholder.com/300x200" alt="World Hijab Day" className="w-full h-48 object-cover mb-2" />
-            <h3 className="text-xl font-semibold">World Hijab Day: 1st February 2025</h3>
-            <p className="text-sm">It's a day set aside for creating awareness about the use of hijab across the world. It's an annual event that holds every February 1st.</p>
+            <img src="/images/event3.jpg" alt="Teachers Get-Together" className="w-full h-48 object-cover mb-2" />
+            <h3 className="text-xl font-semibold">Teachers Get-Together: 5th October, 2025</h3>
+            <p className="text-sm">An inspiring occasion of connection and appreciation: The Teachers’ Get-Together brings our educators together to relax, share experiences, strengthen bonds, and celebrate the invaluable role they play in shaping lives and building the future.</p>
           </div>
         </div>
       </section>
