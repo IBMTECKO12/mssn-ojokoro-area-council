@@ -87,7 +87,7 @@ const Contact = () => {
       <section className="py-10 px-4">
         <h2 className="section-title text-3xl font-bold text-center mb-6">Find Us</h2>
         <div className="contact-item max-w-4xl mx-auto bg-green-100 p-4 rounded-lg shadow-md">
-          <div className="h-64 bg-gray-300 rounded" style={{ backgroundImage: 'url(https://www.google.com/maps/embed?pb=!4v1756071753777!6m8!1m7!1sTIO5_7v_dRx3O5kdeG1Tkw!2m2!1d6.676143248841215!2d3.273781608463964!3f34.27725357582904!4f-6.106383865701488!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade)' }}></div>
+          <div className="h-128 bg-gray-300 rounded" style={{ backgroundImage: 'url(/images/map.png)' }}></div>
           <p className="mt-2 text-center">Location: Jubril Alade Yussuff Compound, Jubril Alade Yussuff Drive, Off Nurain Road, Kola Bus-stop, Agbado, Lagos.</p>
         </div>
       </section>
