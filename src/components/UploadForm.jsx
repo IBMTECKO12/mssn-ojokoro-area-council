@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 
 const UploadForm = ({ onSubmit, formTitle }) => {
   const [formData, setFormData] = useState({
-    title: '',
-    content: '',
+    text: '',
     image: null
   });
   const [imagePreview, setImagePreview] = useState(null);
@@ -20,13 +19,15 @@ const UploadForm = ({ onSubmit, formTitle }) => {
       const reader = new FileReader();
       reader.onloadend = () => setImagePreview(reader.result);
       reader.readAsDataURL(file);
+    } else {
+      setImagePreview(null);
     }
   };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
     onSubmit(formData);
-    setFormData({ title: '', content: '', image: null });
+    setFormData({ text: '', image: null });
     setImagePreview(null);
   };
 
@@ -34,28 +35,15 @@ const UploadForm = ({ onSubmit, formTitle }) => {
     <form onSubmit={handleFormSubmit} className="animate-item max-w-lg mx-auto bg-green-100 p-6 rounded-lg shadow-md">
       <h2 className="text-3xl font-bold text-center mb-6">{formTitle}</h2>
       <div className="mb-4">
-        <label className="block text-sm font-medium mb-2" htmlFor="title">Title</label>
-        <input
-          type="text"
-          id="title"
-          name="title"
-          value={formData.title}
-          onChange={handleInputChange}
-          className="w-full p-2 rounded bg-white text-green-900 border border-green-300"
-          placeholder="Title"
-          required
-        />
-      </div>
-      <div className="mb-4">
-        <label className="block text-sm font-medium mb-2" htmlFor="content">Content</label>
+        <label className="block text-sm font-medium mb-2" htmlFor="text">Text</label>
         <textarea
-          id="content"
-          name="content"
-          value={formData.content}
+          id="text"
+          name="text"
+          value={formData.text}
           onChange={handleInputChange}
           className="w-full p-2 rounded bg-white text-green-900 border border-green-300"
           rows="6"
-          placeholder="Content"
+          placeholder="Enter your news text"
           required
         ></textarea>
       </div>
@@ -67,6 +55,7 @@ const UploadForm = ({ onSubmit, formTitle }) => {
           accept="image/*"
           onChange={handleImageChange}
           className="w-full p-2 rounded bg-white text-green-900 border border-green-300"
+          required
         />
         {imagePreview && (
           <img src={imagePreview} alt="Preview" className="mt-4 w-full h-48 object-cover rounded" />

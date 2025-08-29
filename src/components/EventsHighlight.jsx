@@ -1,11 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import UploadForm from './UploadForm';
 import EventSlideshow from './EventSlideshow';
 
 const EventsHighlight = () => {
+  const [uploadStatus, setUploadStatus] = useState("");
+  const [eventHighlights, setEventHighlights] = useState([]);
+
   useEffect(() => {
+    // Load existing event highlights from localStorage on mount
+    const savedItems = localStorage.getItem('eventHighlights');
+    if (savedItems) {
+      setEventHighlights(JSON.parse(savedItems));
+    }
+
+    // Custom animations
     const sectionTitles = document.querySelectorAll('.section-title');
     sectionTitles.forEach((title, index) => {
       title.style.opacity = '0';
@@ -39,16 +49,48 @@ const EventsHighlight = () => {
         item.style.transform = 'translateX(0)';
       }, index * 150);
     });
-  }, 
-  []);
+  }, []);
 
-  const handleSubmit = (data) => {
-  const submissions = JSON.parse(localStorage.getItem('submissions') || '[]');
-  submissions.push(data);
-  localStorage.setItem('submissions', JSON.stringify(submissions));
-  console.log('Submitted Data Saved Locally:', data);
-  alert('Data saved locally. Check console or localStorage.');
-};
+  const handleSubmit = async (data) => {
+    console.log("Form Data:", data);
+    const { text, image } = data;
+    if (!text.trim() || !image) {
+      setUploadStatus("Please provide both text and an image.");
+      return;
+    }
+
+    try {
+      // Convert image to base64
+      const reader = new FileReader();
+      reader.readAsDataURL(image);
+      const base64Image = await new Promise((resolve) => {
+        reader.onloadend = () => resolve(reader.result);
+      });
+
+      const currentTime = new Date().toLocaleString("en-US", { timeZone: "Africa/Lagos" });
+      const newItem = {
+        id: Date.now(),
+        text,
+        image_url: base64Image,
+        user_name: "Anonymous",
+        created_at: currentTime,
+      };
+      const updatedItems = [newItem, ...eventHighlights];
+      setEventHighlights(updatedItems);
+      localStorage.setItem('eventHighlights', JSON.stringify(updatedItems));
+
+      setUploadStatus(`Event highlight submitted successfully at ${currentTime} WAT!`);
+    } catch (error) {
+      setUploadStatus(`Error submitting event highlight: ${error.message}`);
+    }
+  };
+
+  const handleDelete = (id) => {
+    const updatedItems = eventHighlights.filter(item => item.id !== id);
+    setEventHighlights(updatedItems);
+    localStorage.setItem('eventHighlights', JSON.stringify(updatedItems));
+    setUploadStatus("Event highlight deleted successfully.");
+  };
 
   return (
     <div className="min-h-screen bg-white text-green-900">
@@ -92,10 +134,30 @@ const EventsHighlight = () => {
             <h3 className="text-xl font-semibold">Islamic Vacation Course (IVC)</h3>
             <p><b>Date:</b> December 24, 2025 to January 1, 2026</p>
             <p><b>Location:</b> Human Capital Development Center (HCDC), Noforija, Epe, Lagos.</p>
-            <p><b>Details:</b> An avenue whereby members of the society and other members usually gather to boost their spirituality and also a means to reawaken the soul, assist individuals to guard their souls against the several menaces and ills of the community during the Christian festive seasons, and also relate with different individuals across Lagos State.
-</p>
+            <p><b>Details:</b> An avenue whereby members of the society and other members usually gather to boost their spirituality and also a means to reawaken the soul, assist individuals to guard their souls against the several menaces and ills of the community during the Christian festive seasons, and also relate with different individuals across Lagos State.</p>
           </div>
         </div>
+        {/* User Submitted Event Highlights */}
+        {eventHighlights.length > 0 && (
+          <div className="mt-10">
+            <h2 className="section-title text-3xl font-bold text-center mb-6">Event Highlights</h2>
+            {eventHighlights.map((item) => (
+              <div key={item.id} className="event-item mb-6 bg-green-100 p-4 rounded-lg shadow-md relative">
+                <img src={item.image_url} alt={`Event by ${item.user_name}`} className="w-full h-full object-cover rounded-lg mb-4" />
+                <p className="text-lg text-green-800">{item.text}</p>
+                <p className="text-sm text-gray-600 mt-2">
+                  Posted by {item.user_name} on {item.created_at}
+                </p>
+                <button
+                  onClick={() => handleDelete(item.id)}
+                  className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
+                >
+                  Delete
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
       </section>
 
       <section className="py-10 px-4 bg-green-700 text-white">
@@ -127,7 +189,7 @@ const EventsHighlight = () => {
             <p><b>Schedule:</b> Every Mondays to Thursdays, 4:00 PM - 6:00 PM WAT</p>
             <p><b>Location:</b> Fahmid Kiddies Academy
               18, Shittu street, Off Clem road, Alagbado, Lagos.</p>
-            <p><b>Details:</b>  It's an academic center, where we teach secondary school students their compulsory subjects. It would facilitate students for two major examinations, WAEC and UTME, which will be well coordinated by the Director of Studies (DOS).</p>
+            <p><b>Details:</b> It's an academic center, where we teach secondary school students their compulsory subjects. It would facilitate students for two major examinations, WAEC and UTME, which will be well coordinated by the Director of Studies (DOS).</p>
           </div>
           <div className="event-item bg-green-100 p-4 rounded-lg shadow-md">
             <img src="/images/program4.jpeg" alt="Extra Mural Class (EMC)" className="w-full h-48 object-cover rounded mb-4" />
@@ -161,6 +223,7 @@ const EventsHighlight = () => {
       </section>
       <section className="py-10 px-4">
         <UploadForm onSubmit={handleSubmit} formTitle="Submit Event Highlight" />
+        {uploadStatus && <p className="mt-4 text-sm text-red-600">{uploadStatus}</p>}
       </section>
       <section className="py-4 bg-green-700 text-center">
         <button className="animate-item bg-yellow-400 text-green-900 px-6 py-2 rounded hover:bg-yellow-500">Stay Updated</button>
