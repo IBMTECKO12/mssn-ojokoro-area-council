@@ -13,7 +13,7 @@ const Footer = () => {
         <p className="text-sm sm:text-base">24 hours a Day, 7 days a week</p>
       </section>
       <p className="mb-1 text-xs sm:text-sm sm:mb-2">COPYRIGHT ©2024, MSSN. ALL RIGHTS RESERVED.</p>
-      <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4">
+      <div className="flex justify-center space-y-2 sm:space-y-0 sm:space-x-4">
         <a href="https://web.facebook.com/mssnojokoro/?_rdc=1&_rdr"><img src="/images/facebook-icon.png" alt="Facebook" className="hover:opacity-75 w-10 h-10 sm:w-16 sm:h-16" /></a>
         <a href="https://www.youtube.com/@MSSNOJOKOROAREACOUNCIL-rw6ed"><img src="/images/youtube-icon.png" alt="YouTube" className="hover:opacity-75 w-10 h-10 sm:w-16 sm:h-16" /></a>
         <a href="https://www.instagram.com/mssnojokoroareacouncil?igsh=YzljYTk1ODg3Zg=="><img src="/images/instagram-icon.png" alt="Instagram" className="hover:opacity-75 w-10 h-10 sm:w-16 sm:h-16" /></a>
