@@ -99,36 +99,38 @@ const News = () => {
     <div className="min-h-screen bg-white text-green-900">
       <Header />
       <section className="relative">
-        <img src="/images/banner-news.jpeg" alt="News Banner" className="w-full h-64 object-cover" />
+        <img src="/images/banner-news.jpeg" alt="News Banner" className="w-full h-64 object-cover md:h-80 lg:h-96" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="section-title text-5xl font-bold text-white">News</h1>
+          <h1 className="section-title text-3xl font-bold text-white sm:text-4xl md:text-5xl">News</h1>
         </div>
       </section>
-      <section className="py-10 px-4">
+      <section className="py-6 px-4 sm:py-8 sm:px-6">
         <UploadForm onSubmit={handleSubmit} formTitle="Submit Your News" />
-        {uploadStatus && <p className="mt-4 text-sm text-red-600">{uploadStatus}</p>}
+        {uploadStatus && <p className="mt-2 text-sm text-red-600 sm:text-base">{uploadStatus}</p>}
       </section>
-      <section className="py-4 bg-green-700 text-center">
-        <button className="animate-item bg-yellow-400 text-green-900 px-6 py-2 rounded hover:bg-yellow-500">Stay Updated</button>
+      <section className="py-3 bg-green-700 text-center sm:py-4">
+        <button className="animate-item bg-yellow-400 text-green-900 px-4 py-1 rounded hover:bg-yellow-500 sm:px-6 sm:py-2">Stay Updated</button>
       </section>
       {newsItems.length > 0 && (
-        <section className="py-10 px-4">
-          <h2 className="section-title text-3xl font-bold text-green-900 mb-6">Latest News</h2>
-          {newsItems.map((item) => (
-            <div key={item.id} className="animate-item mb-6 bg-white p-4 rounded-lg shadow-md relative">
-              <img src={item.image_url} alt={`News by ${item.user_name}`} className="w-full h-full object-cover rounded-lg mb-4" />
-              <p className="text-lg text-green-800">{item.text}</p>
-              <p className="text-sm text-gray-600 mt-2">
-                Posted by {item.user_name} on {item.created_at}
-              </p>
-              <button
-                onClick={() => handleDelete(item.id)}
-                className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
-              >
-                Delete
-              </button>
-            </div>
-          ))}
+        <section className="py-6 px-4 sm:py-8 sm:px-6">
+          <h2 className="section-title text-2xl font-bold text-green-900 mb-4 sm:text-3xl sm:mb-6">Latest News</h2>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {newsItems.map((item) => (
+              <div key={item.id} className="animate-item mb-4 bg-white p-2 rounded-lg shadow-md relative sm:p-4">
+                <img src={item.image_url} alt={`News by ${item.user_name}`} className="w-full h-32 object-cover rounded-lg mb-2 sm:h-48 sm:mb-4" />
+                <p className="text-sm text-green-800 sm:text-lg">{item.text}</p>
+                <p className="text-xs text-gray-600 mt-1 sm:text-sm sm:mt-2">
+                  Posted by {item.user_name} on {item.created_at}
+                </p>
+                <button
+                  onClick={() => handleDelete(item.id)}
+                  className="absolute top-1 right-1 bg-red-500 text-white px-1 py-0.5 rounded text-xs hover:bg-red-600 sm:top-2 sm:right-2 sm:px-2 sm:py-1 sm:text-sm"
+                >
+                  Delete
+                </button>
+              </div>
+            ))}
+          </div>
         </section>
       )}
       <Footer />

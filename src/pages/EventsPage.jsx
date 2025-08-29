@@ -3,7 +3,7 @@ import EventsHighlight from '../components/EventsHighlight';
 
 const EventsPage = () => {
   return (
-    <div className="min-h-screen bg-white text-green-900">
+    <div className="min-h-screen bg-white text-green-900 p-2 sm:p-4">
       <EventsHighlight />
     </div>
   );
